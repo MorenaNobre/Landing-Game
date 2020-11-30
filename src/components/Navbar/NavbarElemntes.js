@@ -7,7 +7,7 @@ export const Nav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 10;
 `
@@ -25,6 +25,7 @@ export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
   }
 `;
 
@@ -72,5 +73,6 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: var(--white-color);
+    z-index: 10;
   }
 `
