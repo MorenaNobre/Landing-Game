@@ -4,3 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white-color: #FFFFFF;
+  --dark-bg: #363636;
+  --aqua-color: #63C7A9;
+  --subtititle-color: #F0F0F2;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; */
