@@ -1,15 +1,27 @@
-import React from 'react'
-import { NavbarContainer, Logo, Title } from './NavbarElemntes'
+import React from "react";
+import { FaBars } from "react-icons/fa";
+import {
+  Nav,
+  NavbarContainer,
+  Logo,
+  Title,
+  MobileIcon,
+} from "./NavbarElemntes";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
-      <NavbarContainer>
-        <Logo />
-        <Title>SuperGiantGames</Title>
-      </NavbarContainer>
+      <Nav>
+        <NavbarContainer>
+          <Logo />
+          <Title>SuperGiantGames</Title>
+        </NavbarContainer>
+        <MobileIcon onClick={toggle}>
+          <FaBars />
+        </MobileIcon>
+      </Nav>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
