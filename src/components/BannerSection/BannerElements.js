@@ -37,6 +37,10 @@ export const BannerBg = styled.div`
     height: 630px;
     transition: 0.3s ease-in;
   }
+
+  @media screen and (max-width: 480px) {
+    height: 560px;
+  }
 `;
 
 export const ImgBg = styled.div`
@@ -85,9 +89,20 @@ export const CardTitle = styled.h1`
   font-size: 15px;
   margin-top: 24px;
   color: var(--subtitle-color);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 
   @media screen and (max-width: 960px) {
+    /* width: 362px;
+    margin-left: 30px;
+    font-size: 12px;
+    margin-top: 10px; */
+    width: 287px;
+    margin-left: -8px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 480px) {
     width: 362px;
     margin-left: 30px;
     font-size: 12px;
@@ -110,6 +125,13 @@ export const HeroImg = styled.div`
     margin-top: -32px;
     transition: 0.3s ease-in;
   }
+
+  @media screen and (max-width: 480px) {
+    width: 312px;
+    height: 358px;
+    margin-top: -88px;
+    transition: 0.3s ease-in;
+  }
 `;
 
 export const CardSubtitle = styled.p`
@@ -126,6 +148,13 @@ export const CardSubtitle = styled.p`
   @media screen and (max-width: 960px) {
     width: 152px;
     height: 64px;
+    font-size: 12px;
+    transition: 0.3s ease-in;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 152px;
+    height: 98px;
     font-size: 12px;
     transition: 0.3s ease-in;
   }
