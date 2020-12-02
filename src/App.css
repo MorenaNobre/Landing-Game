@@ -13,3 +13,31 @@
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif; */
+
+.scrollTop {
+  position: static;
+  width: 100%;
+  bottom: 60px;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transform: opacity 0.4s;
+  opacity: 0.5;
+  color: var(--white-color);
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

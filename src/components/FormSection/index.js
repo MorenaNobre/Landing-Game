@@ -1,4 +1,5 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import {
   FormContainer,
   Form,
@@ -13,9 +14,17 @@ import {
 } from "./FormElements";
 
 const FormSection = () => {
+  // eslint-disable-next-line
+  const { register, handleSubmit, watch, errors, reset } = useForm();
+  const onSubmit = (data, e) => {
+    e.target.reset();
+  };
+
+  console.log(watch("nome", "email", "mensagem"));
+
   return (
     <FormContainer>
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <DescriptionContainer>
           <Title>Formulário</Title>
           <Description>
@@ -26,12 +35,30 @@ const FormSection = () => {
           </Description>
         </DescriptionContainer>
         <InputWrapper>
-          <Input placeholder="Nome" type="text" />
-          <Input placeholder="Email" type="text" />
+          <Input
+            name="nome"
+            placeholder="Nome"
+            type="text"
+            ref={register({ required: true })}
+          />
+          {errors.nome && "Nome obrigatório"}
+          <Input
+            name="email"
+            placeholder="Email"
+            type="text"
+            ref={register({ required: true })}
+          />
+          {errors.email && "Email obrigatório"}
         </InputWrapper>
-        <TextAreaContainer placeholder="Mensagem" type="textarea" />
+        <TextAreaContainer
+          name="mensagem"
+          placeholder="Mensagem"
+          type="textarea"
+          ref={register}
+        />
+        {/* {erros.obrigatorio && <span>Campo obrigatório.</span>} */}
         <ButtonWrapper>
-          <Button>Enviar</Button>
+          <Button type="submit">Enviar</Button>
         </ButtonWrapper>
       </Form>
     </FormContainer>

@@ -12,7 +12,7 @@ export const FormContainer = styled.div`
   position: relative;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   position: absolute;
   width: 1082px;
   height: 832.5px;
